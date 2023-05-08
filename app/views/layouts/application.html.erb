@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PayjpPractice</title>
+    <%# <%= csrf_meta_tags %.>
+    <%= csp_meta_tag %.>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %.>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %.> %>
+
+
+
+    <%# <%= stylesheet_link_tag 'application', media: 'all'  %.>
+    <%= javascript_pack_tag 'application' %.> %>
+
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script type="text/javascript" src="https://js.pay.jp/v2/pay.js"></script>
+
+          <%# MEMO
+            クライアントサイドでPAY.JPのAPIを使用するために必要なJavaScriptを読み込もう
+            クライアントサイドからPAY.JPのAPIを使用するためには、payjp.jsというライブラリを読み込みます。
+
+            JavaScriptにおけるライブラリとは、RubyにおけるGemと同じような、便利な処理を提供してくれるまとまりのことです。また、JavaScriptのライブラリを使用するためには、HTMLのhead要素に以下のように記述します。
+
+            【例】ライブラリの読み込み
+            1
+            <script type="text/javascript" src="ライブラリのURL"></script>
+            payjp.jsペイジェーピー ジェーエス
+            クライアントサイドからPAY.JPのAPIを使用するために読み込むJavaScriptのライブラリです。この中に、安全にクレジットカード情報をトークン化するための処理などが含まれています。
+
+            payjp.jsを読み込みましょう
+            application.html.erbのhead要素内に、以下の記述をします。このように記述することで、ブラウザでアプリケーションを開いたときに、payjp.jsが読み込まれます。
+           %>
+   
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
