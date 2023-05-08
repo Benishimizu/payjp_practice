@@ -82,7 +82,7 @@
 
 // 第一引数のcardはPAY.JP側に送るカードの情報で、直前のステップで定義したカード番号に関するelementインスタンス(numberElement)を使います。
 const pay = () => {
-  // const payjp = Payjp('pk_test_*********')// PAY.JPテスト公開鍵
+  // const payjp = Payjp('pk_test_**********')// PAY.JPテスト公開鍵
   const payjp = Payjp(process.env.PAYJP_PUBLIC_KEY);
   const elements = payjp.elements();
   const numberElement = elements.create('cardNumber');
